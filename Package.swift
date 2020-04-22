@@ -6,7 +6,8 @@ import PackageDescription
 let package = Package(
     name: "helloKitura",
     dependencies: [
-        .package(url: "https://github.com/IBM-Swift/Kitura.git", from: "2.5.0")
+        .package(url: "https://github.com/IBM-Swift/Kitura.git", from: "2.5.0"),
+        .package(url: "https://github.com/IBM-Swift/HeliumLogger", from: "1.9.0"),
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
     ],
@@ -15,9 +16,9 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "helloKitura",
-            dependencies: ["Kitura"]),
+            dependencies: ["Kitura","HeliumLogger"]),
         .testTarget(
             name: "helloKituraTests",
-            dependencies: ["helloKitura", "Kitura"]),
+            dependencies: ["helloKitura", "Kitura","HeliumLogger"]),
     ]
 )
