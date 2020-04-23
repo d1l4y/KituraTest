@@ -1,0 +1,4 @@
+module hcapiplugin {
+    umbrella "/Users/dilay/Desktop/appleDevAcademy/backEnd/KituraTest/kituraServer/.build/checkouts/omr-agentcore/src/hcapiplugin/include"
+    export *
+}

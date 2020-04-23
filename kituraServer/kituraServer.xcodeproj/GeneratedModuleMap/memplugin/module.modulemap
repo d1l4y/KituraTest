@@ -1,0 +1,4 @@
+module memplugin {
+    umbrella "/Users/dilay/Desktop/appleDevAcademy/backEnd/KituraTest/kituraServer/.build/checkouts/omr-agentcore/src/memplugin/include"
+    export *
+}
