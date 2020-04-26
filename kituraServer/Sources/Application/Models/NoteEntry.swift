@@ -6,7 +6,11 @@
 //
 
 import Foundation
+import KituraContracts
 
+struct NoteEntryParams: QueryParams {
+    var label: String?
+}
 struct NoteEntry: Codable{
     var id: String?
     var text: String

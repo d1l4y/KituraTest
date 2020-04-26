@@ -13,6 +13,8 @@ var entries: [NoteEntry] = []
 
 func initializeEntryRoutes(app: App) {
     app.router.post("/entries", handler: addEntry)
+    app.router.get("/entries", handler: getEntries)
+    app.router.delete("/entries", handler: deleteEntry)
 }
 
 func addEntry(entry: NoteEntry, completion: @escaping(NoteEntry?,RequestError?) -> Void) {
@@ -24,5 +26,21 @@ func addEntry(entry: NoteEntry, completion: @escaping(NoteEntry?,RequestError?) 
 }
 
 func getAllEntries(completion: @escaping([NoteEntry]?,RequestError?) -> Void) {
-    
+    completion(entries,nil)
+}
+
+func getEntries(params: NoteEntryParams?, completion: @escaping([NoteEntry]?,RequestError?) -> Void) {
+    guard let params = params else {
+        return completion(entries,nil)
+    }
+    let filteredEntries = entries.filter{$0.label == params.label}
+    completion(filteredEntries,nil)
+}
+
+func deleteEntry(id: String, completion:@escaping(RequestError?) -> Void) {
+    guard let index = entries.firstIndex(where:{ $0.id == id }) else {
+        return completion(.notFound)
+    }
+    entries.remove(at: index)
+    completion(nil)
 }

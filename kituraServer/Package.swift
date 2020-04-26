@@ -9,13 +9,15 @@ let package = Package(
       .package(url: "https://github.com/IBM-Swift/CloudEnvironment.git", from: "9.0.0"),
       .package(url: "https://github.com/RuntimeTools/SwiftMetrics.git", from: "2.0.0"),
       .package(url: "https://github.com/IBM-Swift/Health.git", from: "1.0.0"),
+      .package(url: "https://github.com/IBM-Swift/Kitura-OpenAPI.git", from: "1.1.1"),
+
     ],
     targets: [
       .target(name: "kituraServer", dependencies: [ .target(name: "Application") ]),
-      .target(name: "Application", dependencies: [ "Kitura", "HeliumLogger", "CloudEnvironment","SwiftMetrics", "Health", 
+      .target(name: "Application", dependencies: [ "Kitura", "HeliumLogger", "CloudEnvironment","SwiftMetrics", "Health", "KituraOpenAPI",
 
       ]),
 
-      .testTarget(name: "ApplicationTests" , dependencies: [.target(name: "Application"), "Kitura", "HeliumLogger" ])
+      .testTarget(name: "ApplicationTests" , dependencies: [.target(name: "Application"), "Kitura", "HeliumLogger", "KituraOpenAPI", ])
     ]
 )
