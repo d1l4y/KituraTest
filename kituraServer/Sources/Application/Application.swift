@@ -24,6 +24,7 @@ public class App {
         // Endpoints
         initializeHealthRoutes(app: self)
         initializeGetRoutes(app: self)
+        initializeEntryRoutes(app: self)
     }
 
     public func run() throws {

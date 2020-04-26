@@ -63,7 +63,7 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "PORT"
-            value = "8090"
+            value = "8085"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>

@@ -33,6 +33,8 @@
 
 /* Begin PBXBuildFile section */
 		AF0FC4E32451E0C900851A60 /* GetRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0FC4E22451E0C900851A60 /* GetRoutes.swift */; };
+		AFD98F0D245319980001874B /* NoteEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD98F0C245319980001874B /* NoteEntry.swift */; };
+		AFD98F1124531B0D0001874B /* EntryRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD98F1024531B0D0001874B /* EntryRoutes.swift */; };
 		OBJ_1000 /* Kitura.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Kitura::Kitura::Product" /* Kitura.framework */; };
 		OBJ_1001 /* TypeDecoder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "TypeDecoder::TypeDecoder::Product" /* TypeDecoder.framework */; };
 		OBJ_1002 /* KituraContracts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "KituraContracts::KituraContracts::Product" /* KituraContracts.framework */; };
@@ -2466,10 +2468,26 @@
 			remoteGlobalIDString = "Kitura-net::CHTTPParser";
 			remoteInfo = CHTTPParser;
 		};
+		AFD98F0E245319990001874B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Kitura-WebSocket::KituraWebSocket";
+			remoteInfo = KituraWebSocket;
+		};
+		AFD98F0F245319990001874B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "kituraServer::ApplicationTests";
+			remoteInfo = ApplicationTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AF0FC4E22451E0C900851A60 /* GetRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRoutes.swift; sourceTree = "<group>"; };
+		AFD98F0C245319980001874B /* NoteEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEntry.swift; sourceTree = "<group>"; };
+		AFD98F1024531B0D0001874B /* EntryRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryRoutes.swift; sourceTree = "<group>"; };
 		"CloudEnvironment::CloudEnvironment::Product" /* CloudEnvironment.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CloudEnvironment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CloudFoundryEnv::CloudFoundryEnv::Product" /* CloudFoundryEnv.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CloudFoundryEnv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Configuration::Configuration::Product" /* Configuration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Configuration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -3269,6 +3287,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AFD98F0B2453197A0001874B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AFD98F0C245319980001874B /* NoteEntry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		OBJ_102 /* mqttplugin */ = {
 			isa = PBXGroup;
 			children = (
@@ -3345,6 +3371,7 @@
 			children = (
 				OBJ_14 /* HealthRoutes.swift */,
 				AF0FC4E22451E0C900851A60 /* GetRoutes.swift */,
+				AFD98F1024531B0D0001874B /* EntryRoutes.swift */,
 			);
 			path = Routes;
 			sourceTree = "<group>";
@@ -4079,7 +4106,7 @@
 			path = ibmras;
 			sourceTree = "<group>";
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -4099,7 +4126,6 @@
 				OBJ_379 /* Dockerfile-tools */,
 				OBJ_380 /* iterative-dev.sh */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_50 /* common */ = {
@@ -4206,6 +4232,7 @@
 		OBJ_8 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				AFD98F0B2453197A0001874B /* Models */,
 				OBJ_9 /* Application.swift */,
 				OBJ_10 /* InitializationError.swift */,
 				OBJ_11 /* Logging.swift */,
@@ -5432,7 +5459,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_336 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -5668,11 +5695,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				AFD98F1124531B0D0001874B /* EntryRoutes.swift in Sources */,
 				OBJ_386 /* Application.swift in Sources */,
 				OBJ_387 /* InitializationError.swift in Sources */,
 				OBJ_388 /* Logging.swift in Sources */,
 				OBJ_389 /* Metrics.swift in Sources */,
 				AF0FC4E32451E0C900851A60 /* GetRoutes.swift in Sources */,
+				AFD98F0D245319980001874B /* NoteEntry.swift in Sources */,
 				OBJ_390 /* HealthRoutes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -6958,7 +6987,7 @@
 		OBJ_1459 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "kituraServer::ApplicationTests" /* ApplicationTests */;
-			targetProxy = "kituraServer::ApplicationTests" /* ApplicationTests */;
+			targetProxy = AFD98F0F245319990001874B /* PBXContainerItemProxy */;
 		};
 		OBJ_422 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -7403,7 +7432,7 @@
 		OBJ_809 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Kitura-WebSocket::KituraWebSocket" /* KituraWebSocket */;
-			targetProxy = "Kitura-WebSocket::KituraWebSocket" /* KituraWebSocket */;
+			targetProxy = AFD98F0E245319990001874B /* PBXContainerItemProxy */;
 		};
 		OBJ_838 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
