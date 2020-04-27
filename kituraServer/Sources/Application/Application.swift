@@ -19,6 +19,7 @@ public class App {
         initializeLogging()
         // Run the metrics initializer
         initializeMetrics(router: router)
+        Persistence.setUp()
     }
 
     func postInit() throws {
