@@ -22,12 +22,28 @@ class Persistence {
         
         do {
             try NoteEntry.createTableSync()
+            Log.info("\(NoteEntry.tableName) created")
         } catch let error {
             if let requestError = error as? RequestError, requestError.rawValue == RequestError.ormQueryError.rawValue {
                 Log.info("\(NoteEntry.tableName) already created")
             } else {
-                Log.error(error as! String)
+                Log.error(error.localizedDescription)
             }
         }
+    
+        do {
+            try UserAuth.createTableSync()
+            Log.info("\(UserAuth.tableName) created")
+        } catch let error {
+            if let requestError = error as? RequestError, requestError.rawValue == RequestError.ormQueryError.rawValue {
+                Log.info("\(UserAuth.tableName) already created")
+            } else {
+                Log.error(error.localizedDescription)
+            }
+
+            Log.info("setUp: ended")
+        }
     }
+
+    
 }
