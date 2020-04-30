@@ -29,6 +29,7 @@ public class App {
         initializeEntryRoutes(app: self)
         initializeBasicAuth(app: self)
         initializeUserRoutes(app: self)
+        initializeReflectionRoutes(app: self)
         KituraOpenAPI.addEndpoints(to: router)
     }
 

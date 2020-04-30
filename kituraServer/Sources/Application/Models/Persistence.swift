@@ -43,7 +43,19 @@ class Persistence {
 
             Log.info("setUp: ended")
         }
-    }
 
-    
+        // Reflection
+        do {
+            try Reflection.createTableSync()
+        }
+        catch let error {
+            if let requestError = error as? RequestError,
+                requestError.rawValue == RequestError.ormQueryError.rawValue
+            {
+                Log.info("\(Reflection.tableName) already created")
+            } else {
+                Log.error(error.localizedDescription)
+            }
+        }
+    }
 }

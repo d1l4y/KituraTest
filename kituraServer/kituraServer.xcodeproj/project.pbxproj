@@ -32,6 +32,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		AF547B49245A7DDE00B0F87D /* Reflection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF547B48245A7DDE00B0F87D /* Reflection.swift */; };
+		AF547B4B245A7E4000B0F87D /* ReflecRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF547B4A245A7E4000B0F87D /* ReflecRoutes.swift */; };
 		AF583C8C24587D98005F5AF4 /* AuthRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF583C8B24587D98005F5AF4 /* AuthRoutes.swift */; };
 		AF583C902459A7CF005F5AF4 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF583C8F2459A7CF005F5AF4 /* UserAuth.swift */; };
 		AF583C922459AE45005F5AF4 /* UserRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF583C912459AE45005F5AF4 /* UserRoutes.swift */; };
@@ -3225,6 +3227,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF547B48245A7DDE00B0F87D /* Reflection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reflection.swift; sourceTree = "<group>"; };
+		AF547B4A245A7E4000B0F87D /* ReflecRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflecRoutes.swift; sourceTree = "<group>"; };
 		AF583C8B24587D98005F5AF4 /* AuthRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRoutes.swift; sourceTree = "<group>"; };
 		AF583C8F2459A7CF005F5AF4 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
 		AF583C912459AE45005F5AF4 /* UserRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoutes.swift; sourceTree = "<group>"; };
@@ -4269,6 +4273,7 @@
 				OBJ_14 /* NoteEntry.swift */,
 				OBJ_15 /* Persistence.swift */,
 				AF583C8F2459A7CF005F5AF4 /* UserAuth.swift */,
+				AF547B48245A7DDE00B0F87D /* Reflection.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -4419,6 +4424,7 @@
 				OBJ_19 /* HealthRoutes.swift */,
 				AF583C8B24587D98005F5AF4 /* AuthRoutes.swift */,
 				AF583C912459AE45005F5AF4 /* UserRoutes.swift */,
+				AF547B4A245A7E4000B0F87D /* ReflecRoutes.swift */,
 			);
 			path = Routes;
 			sourceTree = "<group>";
@@ -7565,12 +7571,14 @@
 				OBJ_508 /* Application.swift in Sources */,
 				OBJ_509 /* InitializationError.swift in Sources */,
 				OBJ_510 /* Logging.swift in Sources */,
+				AF547B4B245A7E4000B0F87D /* ReflecRoutes.swift in Sources */,
 				OBJ_511 /* Metrics.swift in Sources */,
 				AF583C922459AE45005F5AF4 /* UserRoutes.swift in Sources */,
 				OBJ_512 /* NoteEntry.swift in Sources */,
 				OBJ_513 /* Persistence.swift in Sources */,
 				OBJ_514 /* EntryRoutes.swift in Sources */,
 				AF583C8C24587D98005F5AF4 /* AuthRoutes.swift in Sources */,
+				AF547B49245A7DDE00B0F87D /* Reflection.swift in Sources */,
 				OBJ_515 /* GetRoutes.swift in Sources */,
 				AF583C902459A7CF005F5AF4 /* UserAuth.swift in Sources */,
 				OBJ_516 /* HealthRoutes.swift in Sources */,
